@@ -46,7 +46,7 @@ int main(int argc, char* argv[]) {
 
     std::unique_ptr<AutoModel> chat;
 
-    if (model_info_pair.first.find("llama3") != std::string::npos) {
+    if (model_info_pair.first.find("llama3") != std::string::npos || model_info_pair.first.find("minicpm5") != std::string::npos) {
         chat =  std::make_unique<Llama3>(&npu_device_global);
     }
     else if (model_info_pair.first.find("deepseek-r1-8b") != std::string::npos) {

@@ -22,6 +22,7 @@ has_children: true
 - [MedGemma](medgemma/)
 - [TranslateGemma](translategemma/)
 - [gpt-oss](gpt-oss/)
+- [MiniCPM](minicpm/)
 - [LiquidAI/LFM](lfm/)
 - [Phi](phi/)
 - [Nanbeige](nanbeige/)
