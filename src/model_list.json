@@ -428,6 +428,38 @@
                 "footprint": 0.96
             }
         },
+        "minicpm5": {
+            "8b": {
+                "name": "MiniCPM5-8B-NPU2",
+                "url": "https://huggingface.co/FastFlowLM/MiniCPM5-8B-NPU2",
+                "file_url": "https://huggingface.co/api/models/FastFlowLM/MiniCPM5-8B-NPU2/tree/main",
+                "size": 8000000000,
+                "default_context_length": 32768,
+                "max_prefill_len": 4096,
+                "details": {
+                    "format": "NPU2",
+                    "family": "minicpm5",
+                    "think": false,
+                    "think_toggleable": false,
+                    "parameter_size": "8B",
+                    "quantization_level": "Q4_1"
+                },
+                "flm_min_version": "0.9.45",
+                "vlm": false,
+                "files": [
+                    "config.json",
+                    "model.q4nx",
+                    "tokenizer.json",
+                    "tokenizer_config.json",
+                    "chat_template.jinja"
+                ],
+                "label": [
+                    "reasoning",
+                    "tool-calling"
+                ],
+                "footprint": 6.2
+            }
+        },
         "phi4-mini-it": {
             "4b": {
                 "name": "Phi4-mini-Instruct-NPU2",

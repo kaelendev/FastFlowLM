@@ -27,6 +27,7 @@ sections:
         - "DeepSeek R-1"
         - "Qwen 3 (Vision)"
         - "GPT-OSS (MoE)"
+        - "MiniCPM5"
         - "LFM2 (Liquid AI)"
         - "EmbeddingGemma (RAG)"
         - "Whisper (Audio)"
@@ -55,4 +56,3 @@ sections:
           style: ghost
           external: true
 ---
-

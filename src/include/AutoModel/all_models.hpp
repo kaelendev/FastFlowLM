@@ -42,6 +42,7 @@ typedef enum {
     gpt_oss,
     lfm2,
     lfm2_5_tk,
+    minicpm5,
     phi4,
     nanbeige,
     error_whiper,
@@ -68,6 +69,8 @@ inline std::pair<std::string, std::unique_ptr<AutoModel>> get_auto_model(const s
         {"gpt-oss", SupportedModelFamily::gpt_oss},
         {"lfm2", SupportedModelFamily::lfm2},
         {"lfm2.5-tk", SupportedModelFamily::lfm2_5_tk},
+        {"minicpm5", SupportedModelFamily::minicpm5},
+        {"minicpm", SupportedModelFamily::minicpm5},
         {"qwen2vl", SupportedModelFamily::qwen2vl},
         {"phi4", SupportedModelFamily::phi4},
         {"nanbeige", SupportedModelFamily::nanbeige},
@@ -135,6 +138,9 @@ inline std::pair<std::string, std::unique_ptr<AutoModel>> get_auto_model(const s
             break;
         case SupportedModelFamily::lfm2_5_tk:
             auto_chat_engine = std::make_unique<LFM2_5_TK>(npu_device_inst);
+            break;
+        case SupportedModelFamily::minicpm5:
+            auto_chat_engine = std::make_unique<Llama3>(npu_device_inst);
             break;
         case SupportedModelFamily::nanbeige:
             auto_chat_engine = std::make_unique<Nanbeige>(npu_device_inst);
